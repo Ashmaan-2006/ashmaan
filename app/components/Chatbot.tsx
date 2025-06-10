@@ -1,0 +1,61 @@
+'use client';
+
+import { useState } from 'react';
+
+export default function Chatbot() {
+  const [input, setInput] = useState('');
+  const [messages, setMessages] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+const sendMessage = async () => {
+  if (!input.trim()) return;
+
+  const newMessages = [...messages, `You: ${input}`];
+  setMessages(newMessages);
+  setIsLoading(true);
+
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        messages: [{ role: 'user', content: input }],
+      }),
+    });
+
+    const data = await res.json();
+    setMessages([...newMessages, `Ashmaan: ${data.reply}`]);
+  } catch (err) {
+    setMessages([...newMessages, 'Ashmaan: Error getting response.']);
+  } finally {
+    setIsLoading(false);
+    setInput('');
+  }
+};
+
+  return (
+    <section className="max-w-2xl mx-auto px-4 py-10">
+      <h2 className="text-2xl font-bold mb-4">Ask Ashmaan 🤖</h2>
+      <div className="border rounded-lg p-4 space-y-2 h-64 overflow-y-auto bg-white dark:bg-zinc-800 text-sm">
+        {messages.map((msg, i) => (
+          <p key={i} className="whitespace-pre-wrap">{msg}</p>
+        ))}
+        {isLoading && <p className="text-gray-500">Ashmaan is typing...</p>}
+      </div>
+      <div className="mt-4 flex gap-2">
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Ask me anything..."
+          className="flex-grow p-2 rounded border border-gray-300 dark:border-zinc-600 bg-white dark:bg-zinc-900"
+        />
+        <button
+          onClick={sendMessage}
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Send
+        </button>
+      </div>
+    </section>
+  );
+}
