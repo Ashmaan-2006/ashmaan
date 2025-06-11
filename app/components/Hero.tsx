@@ -10,7 +10,7 @@ export default function Hero() {
         <p className="text-xl sm:text-2xl text-muted-foreground">
           A passionate developer building <span className="text-primary typing-effect" id="workTyping">amazing digital experiences</span>
         </p>
-        <div className="flex gap-4 mt-4">
+        <div className="flex gap-4 mt-4 text-black transition ease-in duration-1000 hover:text-red-500">
           <a href="#contact" className="btn btn-primary">
             Contact Me
           </a>
