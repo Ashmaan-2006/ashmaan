@@ -34,8 +34,11 @@ const sendMessage = async () => {
 };
 
   return (
-    <section className="max-w-2xl mx-auto px-4 py-10">
-      <h2 className="text-2xl font-bold mb-4">Ask Ashmaan 🤖</h2>
+    <section className="max-w-2xl mx-auto px-4 py-10 bg-blue-200 rounded-sm">
+      <div>
+        <p>hi</p>
+      </div>
+      <h2 className="text-2xl font-bold mb-4 bg-white rounded-lg p-4">Ask Ashmaan 🤖</h2>
       <div className="border rounded-lg p-4 space-y-2 h-64 overflow-y-auto bg-white dark:bg-zinc-800 text-sm">
         {messages.map((msg, i) => (
           <p key={i} className="whitespace-pre-wrap">{msg}</p>
