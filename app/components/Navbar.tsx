@@ -78,6 +78,32 @@ export default function Navbar() {
       ref={navRef}
       className="hidden sm:flex fixed bottom-6 left-1/2 -translate-x-1/2 bg-white dark:bg-zinc-900 shadow-xl rounded-full px-6 py-4 flex gap-6 border border-gray-200 dark:border-zinc-700 backdrop-blur-md z-50"
     >
+      {/* Radial Glow Trail */}
+{mouseX !== null && (
+  <motion.div
+    className="absolute top-0 left-0 h-full w-20 pointer-events-none z-[-1]"
+    animate={{
+      x: mouseX - 40,
+      opacity: 0.8,
+    }}
+    transition={{
+      type: 'spring',
+      stiffness: 250,
+      damping: 30,
+      mass: 0.5,
+    }}
+    style={{
+      background: `radial-gradient(circle at center, hsl(${
+        (mouseX / (navRef.current?.clientWidth || 1)) * 360
+      }, 100%, 60%), transparent 70%)`,
+      borderRadius: '9999px',
+      filter: 'blur(16px)',
+    }}
+  />
+)}
+
+
+      {/* Icon Buttons */}
       {navItems.map(({ icon: Icon, label, link }, i) => {
         const scale = getDistanceScale(i);
         return (
@@ -91,7 +117,7 @@ export default function Navbar() {
             }}
             transition={{
               type: 'spring',
-              stiffness: 320, // smoother
+              stiffness: 320,
               damping: 26,
               mass: 0.6,
             }}
