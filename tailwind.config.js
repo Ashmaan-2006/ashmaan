@@ -8,6 +8,12 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      scale: {
+        200: '2',
+        250: '2.5',
+        300: '3',
+        400: '4',
+      },
       colors: {
         background: 'var(--color-background)',
         foreground: 'var(--color-foreground)',
