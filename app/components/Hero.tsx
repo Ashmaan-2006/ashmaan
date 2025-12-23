@@ -5,8 +5,8 @@ export default function Hero() {
         <h1 className="text-4xl leading-[0.95] font-extrabold font-playfair">
           Ashmaan
         </h1>
-        <p className="mt-3 text-sm text-gray-500">
-          Creative developer building thoughtful digital products and experiences.
+        <p className="mt-5 text-md font-extrabold font-playfair text-gray-500">
+          Engineer.           Builder.           Creator.
         </p>
         <div className="mt-6 flex flex-col gap-2">
           <a href="#projects" className="text-sm font-medium underline decoration-dotted underline-offset-4">

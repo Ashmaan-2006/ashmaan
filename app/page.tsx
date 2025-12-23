@@ -28,16 +28,16 @@ export default function Home() {
 
       {/* Page */}
       <main className="min-h-screen bg-[#FAFAFA] text-black">
-         <div className="mx-auto w-full max-w-6xl px-6 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-12 items-start">
+         <div className="mx-auto w-full max-w-screen-2xl px-2 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-12 items-start">
             {/* LEFT: Hero pinned top-left */}
-            <div className="sticky top-12 self-start">
+            <div className="lg:sticky lg:top-[30px] self-start lg:-ml-2">
               <Hero />
             </div>
           
 
           {/* RIGHT: Theo content at top-middle */}
-            <div className="w-full max-w-3xl">
+            <div className="w-full max-w-3xl lg:-mr-16">
               <div className="space-y-10">
                 {/* what i'm up to */}
 
