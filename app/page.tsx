@@ -1,49 +1,244 @@
-import Chatbot from './components/Chatbot';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
+import Chatbot from "./components/Chatbot";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-<>      
-  <nav className="flex fixed top-5 right-32 items-center justify-between px-6 py-4 bg-white/10 shadow-2xl rounded-lg ease-in duration-500 hover:bg-white/80 hover:scale-105">
-    <ul className="flex space-x-6 text-gray-600 font-medium">
-    <li><a href="#about" className="hover:text-blue-600">About</a></li>
-    <li><a href="#projects" className="hover:text-blue-600">Projects</a></li>
-    <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
-  </ul>
-  </nav>
+    <>
+      {/* Your existing floating nav */}
+      <nav className="flex fixed top-5 right-8 items-center justify-between px-6 py-4 bg-white/10 shadow-2xl rounded-lg ease-in duration-500 hover:bg-white/80 hover:scale-105 z-50">
+        <ul className="flex space-x-6 text-gray-600 font-medium">
+          <li>
+            <a href="#about" className="hover:text-blue-600">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#projects" className="hover:text-blue-600">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:text-blue-600">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-    <main className="bg-white flex items-center justify-center">
+      {/* Page */}
+      <main className="min-h-screen bg-[#FAFAFA] text-black">
+        <div className="mx-auto w-full max-w-4xl px-6 py-12">
+          <Hero />
 
-  <div className="text-black space-y-6">
-    <Hero />
-    <div className="">
-    <Chatbot />
-    </div>
-    <Navbar />
-    <div className='py-52'>
-      d
-      s
-      d
-      s
-      d
-      s
-      d
-      s
-      d
-      s
-      d
-      s
-      d
-      s
-      d
-      s
-      d
-      s
-    </div>
-  </div>
-</main>
-</>
+          <div className="mt-12">
+            <Chatbot />
+          </div>
 
-  )
+          {/* Theo-style sections */}
+          <div className="mt-12 space-y-10">
+            {/* what i'm up to */}
+            <section id="about">
+              <h2 className="text-xl font-bold mb-4">what i'm up to</h2>
+              <ul className="space-y-2">
+                <li className="flex">
+                  <span className="mr-2">&gt;</span>
+                  <span>
+                    sophomore @ queen&apos;s university (computer engineering), building projects + chasing
+                    internships
+                  </span>
+                </li>
+                <li className="flex">
+                  <span className="mr-2">&gt;</span>
+                  <span>
+                    currently working on a portfolio chatbot + shipping clean ui in next.js
+                  </span>
+                </li>
+              </ul>
+            </section>
+
+            {/* origins */}
+            <section>
+              <h2 className="text-xl font-bold mb-4">origins</h2>
+              <ul className="space-y-2">
+                <li className="flex">
+                  <span className="mr-2">&gt;</span>
+                  <span>started with websites, then got addicted to shipping real things</span>
+                </li>
+                <li className="flex">
+                  <span className="mr-2">&gt;</span>
+                  <span>
+                    learned fast through hackathons, design teams, and building tools that people actually use
+                  </span>
+                </li>
+              </ul>
+            </section>
+
+            {/* academics */}
+            <section>
+              <h2 className="text-xl font-bold mb-4">academics</h2>
+              <ul className="space-y-2">
+                <li className="flex">
+                  <span className="mr-2">&gt;</span>
+                  <span>queen&apos;s university — computer engineering (sci &apos;28)</span>
+                </li>
+                <li className="flex">
+                  <span className="mr-2">&gt;</span>
+                  <span>
+                    focused on systems + ml fundamentals: algorithms, data structures, deep learning, and practical full-stack
+                  </span>
+                </li>
+              </ul>
+            </section>
+
+            {/* internships */}
+            <section>
+              <h2 className="text-xl font-bold mb-4">internships</h2>
+              <ul className="space-y-2">
+                <li className="flex">
+                  <span className="mr-2">&gt;</span>
+                  <span>
+                    built modular full-stack features (next.js + ts + postgres/prisma) and shipped production work under deadlines
+                  </span>
+                </li>
+              </ul>
+            </section>
+
+            {/* key projects */}
+            <section id="projects">
+              <h2 className="text-xl font-bold mb-4">key projects</h2>
+              <ul className="space-y-4">
+                <li>
+                  <div className="flex items-start">
+                    <span className="flex-shrink-0 mr-2">&gt;</span>
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-baseline">
+                        <span className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default">
+                          promptecg
+                        </span>
+                        <span className="text-sm text-gray-500">
+                          — text-to-ecg generation pipeline (pytorch)
+                        </span>
+                      </div>
+                      <ul className="ml-4 mt-1 text-sm">
+                        <li className="flex">
+                          <span className="mr-2">◦</span>
+                          <span>
+                            exploring diffusion + vq-style tokenization for stable ecg synthesis
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div className="flex items-start">
+                    <span className="flex-shrink-0 mr-2">&gt;</span>
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-baseline">
+                        <span className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default">
+                          pitchperfect
+                        </span>
+                        <span className="text-sm text-gray-500">
+                          — hack the 6ix auth0 prize, ai roleplay coach
+                        </span>
+                      </div>
+                      <ul className="ml-4 mt-1 text-sm">
+                        <li className="flex">
+                          <span className="mr-2">◦</span>
+                          <span>
+                            next.js frontend + flask backend + gemini, stored conversations in mongodb
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div className="flex items-start">
+                    <span className="flex-shrink-0 mr-2">&gt;</span>
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-baseline">
+                        <a
+                          href="https://github.com/Ashmaan-2006"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mr-1 border-b border-gray-300 hover:border-gray-500"
+                        >
+                          github
+                        </a>
+                        <span className="text-sm text-gray-500">
+                          — more projects + code
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <span className="text-sm text-gray-500 italic block mt-4">
+                for more detail, see my
+                <a
+                  href="/assets/resume.pdf"
+                  className="underline ml-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  resume
+                </a>
+              </span>
+            </section>
+
+            {/* contact */}
+            <section id="contact">
+              <h2 className="text-xl font-bold mb-4">contact</h2>
+              <ul className="space-y-2">
+                <li className="flex">
+                  <span className="mr-2">&gt;</span>
+                  <span>
+                    reach me on{" "}
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-b border-gray-300 hover:border-gray-500"
+                    >
+                      linkedin
+                    </a>{" "}
+                    or by email
+                  </span>
+                </li>
+              </ul>
+            </section>
+
+            {/* background */}
+            <section>
+              <h2 className="text-xl font-bold mb-4">background</h2>
+              <div className="text-sm space-y-2">
+                <div>
+                  <span className="mr-2">technical arsenal:</span>
+                  <span className="text-gray-500">
+                    next.js, react, ts/js, python, flutter, postgres (prisma), git, docker, pytorch
+                  </span>
+                </div>
+                <div>
+                  <span className="mr-2">interests:</span>
+                  <span className="text-gray-500">
+                    hackathons, human-centered ai, research, cars, shipping clean products
+                  </span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        {/* If you want to keep your Navbar component, put it here as a footer-style nav */}
+        {/* <div className="mt-16">
+          <Navbar />
+        </div> */}
+      </main>
+    </>
+  );
 }
