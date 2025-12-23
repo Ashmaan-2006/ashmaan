@@ -28,34 +28,19 @@ export default function Home() {
 
       {/* Page */}
       <main className="min-h-screen bg-[#FAFAFA] text-black">
-        <div className="mx-auto w-full max-w-4xl px-6 py-12">
-          <Hero />
+         <div className="mx-auto w-full max-w-6xl px-6 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-12 items-start">
+            {/* LEFT: Hero pinned top-left */}
+            <div className="sticky top-12 self-start">
+              <Hero />
+            </div>
+          
 
-          <div className="mt-12">
-            <Chatbot />
-          </div>
+          {/* RIGHT: Theo content at top-middle */}
+            <div className="w-full max-w-3xl">
+              <div className="space-y-10">
+                {/* what i'm up to */}
 
-          {/* Theo-style sections */}
-          <div className="mt-12 space-y-10">
-            {/* what i'm up to */}
-            <section id="about">
-              <h2 className="text-xl font-bold mb-4">what i'm up to</h2>
-              <ul className="space-y-2">
-                <li className="flex">
-                  <span className="mr-2">&gt;</span>
-                  <span>
-                    sophomore @ queen&apos;s university (computer engineering), building projects + chasing
-                    internships
-                  </span>
-                </li>
-                <li className="flex">
-                  <span className="mr-2">&gt;</span>
-                  <span>
-                    currently working on a portfolio chatbot + shipping clean ui in next.js
-                  </span>
-                </li>
-              </ul>
-            </section>
 
             {/* origins */}
             <section>
@@ -233,11 +218,12 @@ export default function Home() {
             </section>
           </div>
         </div>
+        </div>
+        </div>
 
-        {/* If you want to keep your Navbar component, put it here as a footer-style nav */}
-        {/* <div className="mt-16">
+        {<div className="mt-16">
           <Navbar />
-        </div> */}
+        </div>}
       </main>
     </>
   );
