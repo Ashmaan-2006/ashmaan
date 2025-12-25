@@ -1,5 +1,5 @@
 import Link from "next/dist/client/link";
-import Chatbot from "./components/Chatbot";
+/* import Chatbot from "./components/Chatbot"; */
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
