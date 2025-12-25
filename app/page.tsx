@@ -1,3 +1,4 @@
+import Link from "next/dist/client/link";
 import Chatbot from "./components/Chatbot";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -28,16 +29,16 @@ export default function Home() {
 
       {/* Page */}
       <main className="min-h-screen bg-[#FAFAFA] text-black">
-         <div className="mx-auto w-full max-w-6xl px-6 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-12 items-start">
+         <div className="mx-auto w-full max-w-screen-2xl px-2 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-12 items-start">
             {/* LEFT: Hero pinned top-left */}
-            <div className="sticky top-12 self-start">
+            <div className="lg:sticky lg:top-[30px] self-start lg:-ml-2">
               <Hero />
             </div>
           
 
           {/* RIGHT: Theo content at top-middle */}
-            <div className="w-full max-w-3xl">
+            <div className="w-full max-w-3xl lg:-mr-16">
               <div className="space-y-10">
                 {/* what i'm up to */}
 
@@ -122,9 +123,13 @@ export default function Home() {
                     <span className="flex-shrink-0 mr-2">&gt;</span>
                     <div className="flex-1">
                       <div className="flex flex-wrap items-baseline">
-                        <span className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default">
+                        <Link
+                          href="https://github.com/VainerAriel/HackThe6ix2025"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default">
                           pitchperfect
-                        </span>
+                        </Link>
                         <span className="text-sm text-gray-500">
                           — hack the 6ix auth0 prize, ai roleplay coach
                         </span>
@@ -146,21 +151,87 @@ export default function Home() {
                     <span className="flex-shrink-0 mr-2">&gt;</span>
                     <div className="flex-1">
                       <div className="flex flex-wrap items-baseline">
-                        <a
-                          href="https://github.com/Ashmaan-2006"
+                        <Link
+                          href="https://github.com/eunsongkoh/vybe"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mr-1 border-b border-gray-300 hover:border-gray-500"
-                        >
-                          github
-                        </a>
+                          className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default">
+                          vybe
+                        </Link>
                         <span className="text-sm text-gray-500">
-                          — more projects + code
+                          — hack the north — adaptive music from crowd motion
                         </span>
                       </div>
+                      <ul className="ml-4 mt-1 text-sm">
+                        <li className="flex">
+                          <span className="mr-2">◦</span>
+                          <span>
+                            depth-sensor powered playlist system that reacts to audience energy in real-time to drive engagement
+                          </span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </li>
+
+                <li>
+                  <div className="flex items-start">
+                    <span className="flex-shrink-0 mr-2">&gt;</span>
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-baseline">
+                        <Link
+                          href="https://github.com/ian-yeh/hack-western"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default">
+                          testpilot
+                        </Link>
+                        <span className="text-sm text-gray-500">
+                          — hack western — AI agents for automated frontend UI testing
+                        </span>
+                      </div>
+                      <ul className="ml-4 mt-1 text-sm">
+                        <li className="flex">
+                          <span className="mr-2">◦</span>
+                          <span>
+                            full-stack app using Playwright, WebSockets, FastAPI, and Gemini to execute UI test flows from a single prompt
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+
+                <li>
+                  <div className="flex items-start">
+                    <span className="flex-shrink-0 mr-2">&gt;</span>
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-baseline">
+                        <Link
+                          href="https://github.com/Ashmaan-2006/MapleLens"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default">
+                          maplelens
+                        </Link>
+                        <span className="text-sm text-gray-500">
+                          — genAI genesis hackathon — AI product scanner for Canadian alternatives
+                        </span>
+                      </div>
+                      <ul className="ml-4 mt-1 text-sm">
+                        <li className="flex">
+                          <span className="mr-2">◦</span>
+                          <span>
+                            camera-based product recognition that recommends cheaper Canadian equivalents to promote smarter shopping
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+
               </ul>
 
               <span className="text-sm text-gray-500 italic block mt-4">
