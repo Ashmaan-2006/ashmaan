@@ -1,0 +1,42 @@
+[1mdiff --git a/app/page.tsx b/app/page.tsx[m
+[1mindex 4bedeeb..306f97f 100644[m
+[1m--- a/app/page.tsx[m
+[1m+++ b/app/page.tsx[m
+[36m@@ -237,7 +237,7 @@[m [mexport default function Home() {[m
+               <span className="text-sm text-gray-500 italic block mt-4">[m
+                 for more detail, see my[m
+                 <a[m
+[31m-                  href="/assets/resume.pdf"[m
+[32m+[m[32m                  href="https://drive.google.com/file/d/1i0jPezaeIN_l25Y1faJTkAF4fZ1IgnOW/view?usp=sharing"[m
+                   className="underline ml-1"[m
+                   target="_blank"[m
+                   rel="noopener noreferrer"[m
+[36m@@ -256,7 +256,7 @@[m [mexport default function Home() {[m
+                   <span>[m
+                     reach me on{" "}[m
+                     <a[m
+[31m-                      href="https://www.linkedin.com/"[m
+[32m+[m[32m                      href="https://www.linkedin.com/in/ashmaan-sohail/"[m
+                       target="_blank"[m
+                       rel="noopener noreferrer"[m
+                       className="border-b border-gray-300 hover:border-gray-500"[m
+[36m@@ -276,13 +276,17 @@[m [mexport default function Home() {[m
+                 <div>[m
+                   <span className="mr-2">technical arsenal:</span>[m
+                   <span className="text-gray-500">[m
+[31m-                    next.js, react, ts/js, python, flutter, postgres (prisma), git, docker, pytorch[m
+[32m+[m[32m                    full-stack (next.js, react, ts/js, node.js), ai/ml (pytorch, tensorflowopencv),[m
+[32m+[m[32m                    mobile (flutter), backend (flask, fastapi), cloud/devops (aws, docker, git),[m
+[32m+[m[32m                    databases (postgres + prisma, mongodb)[m
+                   </span>[m
+                 </div>[m
+                 <div>[m
+                   <span className="mr-2">interests:</span>[m
+                   <span className="text-gray-500">[m
+[31m-                    hackathons, human-centered ai, research, cars, shipping clean products[m
+[32m+[m[32m                    hackathons (5+ and counting), human-centered ai (text→ecg research w/ aiim labs),[m[41m [m
+[32m+[m[32m                    entrepreneurship (mnafs: $6k+ mrr), clean transportation (hyperloop routing models paper),[m
+[32m+[m[32m                    basketball (intramural team captain, high school varsity)[m
+                   </span>[m
+                 </div>[m
+               </div>[m

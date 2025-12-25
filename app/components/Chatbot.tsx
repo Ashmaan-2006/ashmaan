@@ -26,6 +26,7 @@ const sendMessage = async () => {
     const data = await res.json();
     setMessages([...newMessages, `Ashmaan: ${data.reply}`]);
   } catch (err) {
+    console.error("Chatbot error:", err);
     setMessages([...newMessages, 'Ashmaan: Error getting response.']);
   } finally {
     setIsLoading(false);
