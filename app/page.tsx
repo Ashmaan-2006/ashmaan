@@ -237,7 +237,7 @@ export default function Home() {
               <span className="text-sm text-gray-500 italic block mt-4">
                 for more detail, see my
                 <a
-                  href="/assets/resume.pdf"
+                  href="https://drive.google.com/file/d/1i0jPezaeIN_l25Y1faJTkAF4fZ1IgnOW/view?usp=sharing"
                   className="underline ml-1"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -256,7 +256,7 @@ export default function Home() {
                   <span>
                     reach me on{" "}
                     <a
-                      href="https://www.linkedin.com/"
+                      href="https://www.linkedin.com/in/ashmaan-sohail/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="border-b border-gray-300 hover:border-gray-500"
@@ -276,13 +276,17 @@ export default function Home() {
                 <div>
                   <span className="mr-2">technical arsenal:</span>
                   <span className="text-gray-500">
-                    next.js, react, ts/js, python, flutter, postgres (prisma), git, docker, pytorch
+                    full-stack (next.js, react, ts/js, node.js), ai/ml (pytorch, tensorflowopencv),
+                    mobile (flutter), backend (flask, fastapi), cloud/devops (aws, docker, git),
+                    databases (postgres + prisma, mongodb)
                   </span>
                 </div>
                 <div>
                   <span className="mr-2">interests:</span>
                   <span className="text-gray-500">
-                    hackathons, human-centered ai, research, cars, shipping clean products
+                    hackathons (5+ and counting), human-centered ai (text→ecg research w/ aiim labs), 
+                    entrepreneurship (mnafs: $6k+ mrr), clean transportation (hyperloop routing models paper),
+                    basketball (intramural team captain, high school varsity)
                   </span>
                 </div>
               </div>
