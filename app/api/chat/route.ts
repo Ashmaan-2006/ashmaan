@@ -1,4 +1,4 @@
-import OpenAI from 'openai';
+/* import OpenAI from 'openai';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY!,
@@ -23,3 +23,5 @@ export async function POST(req: Request) {
     return new Response("Error getting OpenAI response", { status: 500 });
   }
 }
+
+*/
