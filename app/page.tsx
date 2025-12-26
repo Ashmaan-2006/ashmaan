@@ -32,7 +32,7 @@ export default function Home() {
          <div className="mx-auto w-full max-w-screen-2xl px-2 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-12 items-start">
             {/* LEFT: Hero pinned top-left */}
-            <div className="lg:sticky lg:top-[30px] self-start lg:-ml-2">
+            <div className="lg:sticky lg:top-[30px] self-start lg:ml-10">
               <Hero />
             </div>
           
