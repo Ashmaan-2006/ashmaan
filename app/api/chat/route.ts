@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 // Minimal stub so Vercel can build even without OpenAI
-export async function POST(req: NextRequest) {
+export async function POST() {
   return NextResponse.json({
     reply: "Chatbot temporarily disabled while I finish deployment.",
   });
