@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import SplashCursor from "@/components/SplashCursor";
 
 
+
 <SplashCursor />
 
 const geistSans = Geist({
@@ -38,7 +39,8 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
       >
-        <SplashCursor />
+        {/* <SplashCursor /> */}
+        
 
         {children}
       </body>

@@ -3,15 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import {
-  Home,
-  MessageCircle,
-  User,
-  Twitter,
-  Linkedin,
-  Github,
-  Mail,
-} from 'lucide-react';
+import { Home, MessageCircle, Twitter, Linkedin, Github, Mail, Camera } from 'lucide-react';
 import clsx from 'clsx';
 
 const navItems = [
@@ -21,10 +13,15 @@ const navItems = [
   { icon: Mail, label: 'Email', link: 'mailto:23px63@queensu.ca.com' },
   { icon: Home, label: 'Home' },
   { icon: MessageCircle, label: 'Chat' },
-  { icon: User, label: 'About' },
+  { icon: Camera, label: 'Pictures' },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  onTogglePictures?: (show: boolean) => void;
+  picturesActive?: boolean;
+}
+
+export default function Navbar({ onTogglePictures, picturesActive = false }: NavbarProps) {
   const navRef = useRef<HTMLDivElement>(null);
   const [mouseX, setMouseX] = useState<number | null>(null);
   const router = useRouter();
@@ -66,6 +63,10 @@ export default function Navbar() {
   };
 
   const handleClick = (label: string, link?: string) => {
+    if (label === 'Pictures') {
+      onTogglePictures?.(!picturesActive);
+      return;
+    }
     if (link) {
       window.open(link, '_blank');
     } else {
@@ -122,10 +123,12 @@ export default function Navbar() {
               mass: 0.6,
             }}
             className={clsx(
-              'flex flex-col items-center text-gray-500 hover:text-blue-600 transition-[color,opacity] duration-150 ease-out focus:outline-none'
+              'flex flex-col items-center text-gray-500 hover:text-blue-600 transition-[color,opacity] duration-150 ease-out focus:outline-none',
+              label === 'Pictures' && picturesActive && 'text-blue-600'
             )}
             aria-label={label}
             title={label}
+            aria-pressed={label === 'Pictures' ? picturesActive : undefined}
           >
             <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
           </motion.button>
