@@ -480,15 +480,15 @@ class App {
   ) {
     const defaultItems = [
       {
-        image: `https://picsum.photos/seed/1/800/600?grayscale`,
+        image: `/portfolio-photos/oweek1.jpg`,
         text: 'Bridge'
       },
       {
-        image: `https://picsum.photos/seed/2/800/600?grayscale`,
+        image: `/portfolio-photos/oweek2.jpg`,
         text: 'Desk Setup'
       },
       {
-        image: `https://picsum.photos/seed/3/800/600?grayscale`,
+        image: `/portfolio-photos/oweek3.jpg`,
         text: 'Waterfall'
       },
       {
