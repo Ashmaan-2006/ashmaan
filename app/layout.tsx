@@ -39,7 +39,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
       >
-        {/* <SplashCursor /> */}
+         <SplashCursor />
         
 
         {children}
