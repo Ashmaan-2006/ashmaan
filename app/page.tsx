@@ -1,12 +1,17 @@
-import Link from "next/dist/client/link";
-/* import Chatbot from "./components/Chatbot"; */
+'use client';
+/* eslint-disable react/no-unescaped-entities */
+
+import Link from "next/link";
+import { useState } from "react";
 import Hero from "./components/Hero";
+import CircularGallery from "../components/CircularGallery";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
+  const [showPictures, setShowPictures] = useState(false);
+
   return (
     <>
-      {/* Your existing floating nav */}
       <nav className="flex fixed top-5 right-8 items-center justify-between px-6 py-4 bg-white/10 shadow-2xl rounded-lg ease-in duration-500 hover:bg-white/80 hover:scale-105 z-50">
         <ul className="flex space-x-6 text-gray-600 font-medium">
           <li>
@@ -27,73 +32,67 @@ export default function Home() {
         </ul>
       </nav>
 
-      {/* Page */}
       <main className="min-h-screen bg-[#FAFAFA] text-black">
-         <div className="mx-auto w-full max-w-screen-2xl px-2 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-12 items-start">
-            {/* LEFT: Hero pinned top-left */}
-            <div className="lg:sticky lg:top-[30px] self-start lg:ml-10">
-              <Hero />
+        <div className="mx-auto w-full max-w-screen-2xl px-2 py-12">
+          {showPictures ? (
+            <div className="w-full flex justify-center">
+              <div style={{ height: "600px", position: "relative", width: "100%" }}>
+                <CircularGallery bend={3} textColor="#000000" borderRadius={0.05} scrollEase={0.02} />
+              </div>
             </div>
-          
+          ) : (
+            <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-12 items-start">
+              <div className="lg:sticky lg:top-[30px] self-start lg:ml-10">
+                <Hero />
+              </div>
 
-          {/* RIGHT: Theo content at top-middle */}
-            <div className="w-full max-w-3xl lg:-mr-16">
-              <div className="space-y-10">
-                {/* what i'm up to */}
+              <div className="w-full max-w-3xl lg:-mr-16">
+                <div className="space-y-10">
+                  <section>
+                    <h2 className="text-xl font-bold mb-4">origins</h2>
+                    <ul className="space-y-2">
+                      <li className="flex">
+                        <span className="mr-2">&gt;</span>
+                        <span>started with websites, then got addicted to shipping real things</span>
+                      </li>
+                      <li className="flex">
+                        <span className="mr-2">&gt;</span>
+                        <span>learned fast through hackathons, design teams, and building tools that people actually use</span>
+                      </li>
+                    </ul>
+                  </section>
 
+                  <section id="about">
+                    <h2 className="text-xl font-bold mb-4">academics</h2>
+                    <ul className="space-y-2">
+                      <li className="flex">
+                        <span className="mr-2">&gt;</span>
+                        <span>queen&apos;s university computer engineering (sci &apos;28)</span>
+                      </li>
+                      <li className="flex">
+                        <span className="mr-2">&gt;</span>
+                        <span>
+                          focused on systems + ml fundamentals: algorithms, data structures, deep learning, and practical full-stack
+                        </span>
+                      </li>
+                    </ul>
+                  </section>
 
-            {/* origins */}
-            <section>
-              <h2 className="text-xl font-bold mb-4">origins</h2>
-              <ul className="space-y-2">
-                <li className="flex">
-                  <span className="mr-2">&gt;</span>
-                  <span>started with websites, then got addicted to shipping real things</span>
-                </li>
-                <li className="flex">
-                  <span className="mr-2">&gt;</span>
-                  <span>
-                    learned fast through hackathons, design teams, and building tools that people actually use
-                  </span>
-                </li>
-              </ul>
-            </section>
+                  <section>
+                    <h2 className="text-xl font-bold mb-4">internships</h2>
+                    <ul className="space-y-2">
+                      <li className="flex">
+                        <span className="mr-2">&gt;</span>
+                        <span>
+                          built modular full-stack features (next.js + ts + postgres/prisma) and shipped production work under deadlines
+                        </span>
+                      </li>
+                    </ul>
+                  </section>
 
-            {/* academics */}
-            <section>
-              <h2 className="text-xl font-bold mb-4">academics</h2>
-              <ul className="space-y-2">
-                <li className="flex">
-                  <span className="mr-2">&gt;</span>
-                  <span>queen&apos;s university — computer engineering (sci &apos;28)</span>
-                </li>
-                <li className="flex">
-                  <span className="mr-2">&gt;</span>
-                  <span>
-                    focused on systems + ml fundamentals: algorithms, data structures, deep learning, and practical full-stack
-                  </span>
-                </li>
-              </ul>
-            </section>
-
-            {/* internships */}
-            <section>
-              <h2 className="text-xl font-bold mb-4">internships</h2>
-              <ul className="space-y-2">
-                <li className="flex">
-                  <span className="mr-2">&gt;</span>
-                  <span>
-                    built modular full-stack features (next.js + ts + postgres/prisma) and shipped production work under deadlines
-                  </span>
-                </li>
-              </ul>
-            </section>
-
-            {/* key projects */}
-            <section id="projects">
-              <h2 className="text-xl font-bold mb-4">key projects</h2>
-              <ul className="space-y-4">
+                  <section id="projects">
+                    <h2 className="text-xl font-bold mb-4">key projects</h2>
+                    <ul className="space-y-4">
                 <li>
                   <div className="flex items-start">
                     <span className="flex-shrink-0 mr-2">&gt;</span>
@@ -231,74 +230,70 @@ export default function Home() {
                   </div>
                 </li>
 
+                    </ul>
 
-              </ul>
+                    <span className="text-sm text-gray-500 italic block mt-4">
+                      for more detail, see my
+                      <a
+                        href="https://drive.google.com/file/d/1i0jPezaeIN_l25Y1faJTkAF4fZ1IgnOW/view?usp=sharing"
+                        className="underline ml-1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        resume
+                      </a>
+                    </span>
+                  </section>
 
-              <span className="text-sm text-gray-500 italic block mt-4">
-                for more detail, see my
-                <a
-                  href="https://drive.google.com/file/d/1i0jPezaeIN_l25Y1faJTkAF4fZ1IgnOW/view?usp=sharing"
-                  className="underline ml-1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  resume
-                </a>
-              </span>
-            </section>
+                  <section id="contact">
+                    <h2 className="text-xl font-bold mb-4">contact</h2>
+                    <ul className="space-y-2">
+                      <li className="flex">
+                        <span className="mr-2">&gt;</span>
+                        <span>
+                          reach me on{" "}
+                          <a
+                            href="https://www.linkedin.com/in/ashmaan-sohail/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="border-b border-gray-300 hover:border-gray-500"
+                          >
+                            linkedin
+                          </a>{" "}
+                          or by email
+                        </span>
+                      </li>
+                    </ul>
+                  </section>
 
-            {/* contact */}
-            <section id="contact">
-              <h2 className="text-xl font-bold mb-4">contact</h2>
-              <ul className="space-y-2">
-                <li className="flex">
-                  <span className="mr-2">&gt;</span>
-                  <span>
-                    reach me on{" "}
-                    <a
-                      href="https://www.linkedin.com/in/ashmaan-sohail/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border-b border-gray-300 hover:border-gray-500"
-                    >
-                      linkedin
-                    </a>{" "}
-                    or by email
-                  </span>
-                </li>
-              </ul>
-            </section>
-
-            {/* background */}
-            <section>
-              <h2 className="text-xl font-bold mb-4">background</h2>
-              <div className="text-sm space-y-2">
-                <div>
-                  <span className="mr-2">technical arsenal:</span>
-                  <span className="text-gray-500">
-                    full-stack (next.js, react, ts/js, node.js), ai/ml (pytorch, tensorflowopencv),
-                    mobile (flutter), backend (flask, fastapi), cloud/devops (aws, docker, git),
-                    databases (postgres + prisma, mongodb)
-                  </span>
-                </div>
-                <div>
-                  <span className="mr-2">interests:</span>
-                  <span className="text-gray-500">
-                    hackathons (5+ and counting), human-centered ai (text→ecg research w/ aiim labs), 
-                    entrepreneurship (mnafs: $6k+ mrr), clean transportation (hyperloop routing models paper),
-                    basketball (intramural team captain, high school varsity)
-                  </span>
+                  <section>
+                    <h2 className="text-xl font-bold mb-4">background</h2>
+                    <div className="text-sm space-y-2">
+                      <div>
+                        <span className="mr-2">technical arsenal:</span>
+                        <span className="text-gray-500">
+                          full-stack (next.js, react, ts/js, node.js), ai/ml (pytorch, tensorflowopencv), mobile (flutter),
+                          backend (flask, fastapi), cloud/devops (aws, docker, git), databases (postgres + prisma, mongodb)
+                        </span>
+                      </div>
+                      <div>
+                        <span className="mr-2">interests:</span>
+                        <span className="text-gray-500">
+                          hackathons (5+ and counting), human-centered ai (textƒ+'ecg research w/ aiim labs), entrepreneurship (mnafs: $6k+ mrr),
+                          clean transportation (hyperloop routing models paper), basketball (intramural team captain, high school varsity)
+                        </span>
+                      </div>
+                    </div>
+                  </section>
                 </div>
               </div>
-            </section>
-          </div>
-        </div>
-        </div>
+            </div>
+          )}
         </div>
 
-        {<div className="mt-16">
-          <Navbar />
-        </div>}
+        <div className="mt-16">
+          <Navbar onTogglePictures={setShowPictures} picturesActive={showPictures} />
+        </div>
       </main>
     </>
   );
