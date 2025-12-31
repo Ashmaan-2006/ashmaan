@@ -46,49 +46,68 @@ export default function Home() {
                 <Hero />
               </div>
 
-              <div className="w-full max-w-3xl lg:-mr-16">
-                <div className="space-y-10">
-                  <section>
-                    <h2 className="text-xl font-bold mb-4">origins</h2>
-                    <ul className="space-y-2">
-                      <li className="flex">
-                        <span className="mr-2">&gt;</span>
-                        <span>started with websites, then got addicted to shipping real things</span>
-                      </li>
-                      <li className="flex">
-                        <span className="mr-2">&gt;</span>
-                        <span>learned fast through hackathons, design teams, and building tools that people actually use</span>
-                      </li>
-                    </ul>
-                  </section>
+<div className="w-full max-w-3xl lg:-mr-16">
+  <div className="space-y-10">
 
-                  <section id="about">
-                    <h2 className="text-xl font-bold mb-4">academics</h2>
-                    <ul className="space-y-2">
-                      <li className="flex">
-                        <span className="mr-2">&gt;</span>
-                        <span>queen&apos;s university computer engineering (sci &apos;28)</span>
-                      </li>
-                      <li className="flex">
-                        <span className="mr-2">&gt;</span>
-                        <span>
-                          focused on systems + ml fundamentals: algorithms, data structures, deep learning, and practical full-stack
-                        </span>
-                      </li>
-                    </ul>
-                  </section>
+    <section>
+      <h2 className="text-xl font-bold mb-4">origins</h2>
+      <ul className="space-y-2">
+        <li className="flex">
+          <span className="mr-2">&gt;</span>
+          <span>started with websites in high school, then got addicted to shipping real tools people use</span>
+        </li>
+        <li className="flex">
+          <span className="mr-2">&gt;</span>
+          <span>learned fast through hackathons, design teams, and founder-style roles where execution matters</span>
+        </li>
+        <li className="flex">
+          <span className="mr-2">&gt;</span>
+          <span>built an e-commerce business doing $6k+ MRR while still in first year</span>
+        </li>
+      </ul>
+    </section>
 
-                  <section>
-                    <h2 className="text-xl font-bold mb-4">internships</h2>
-                    <ul className="space-y-2">
-                      <li className="flex">
-                        <span className="mr-2">&gt;</span>
-                        <span>
-                          built modular full-stack features (next.js + ts + postgres/prisma) and shipped production work under deadlines
-                        </span>
-                      </li>
-                    </ul>
-                  </section>
+    <section id="about">
+      <h2 className="text-xl font-bold mb-4">academics</h2>
+      <ul className="space-y-2">
+        <li className="flex">
+          <span className="mr-2">&gt;</span>
+          <span>queen’s university computer engineering (sci ’28), systems + ml focus</span>
+        </li>
+        <li className="flex">
+          <span className="mr-2">&gt;</span>
+          <span>researcher at the AI for Human Sensing Lab — building generative ECG models with diffusion + VQ-VAE</span>
+        </li>
+        <li className="flex">
+          <span className="mr-2">&gt;</span>
+          <span>obsessed with learning by doing: algorithms, practical deep learning, and full-stack engineering</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 className="text-xl font-bold mb-4">internships</h2>
+      <ul className="space-y-2">
+        <li className="flex">
+          <span className="mr-2">&gt;</span>
+          <span>
+            shipped production features at Playtoon — cutting query times saving 1500+ user hours + integrating LLM tooling
+          </span>
+        </li>
+        <li className="flex">
+          <span className="mr-2">&gt;</span>
+          <span>
+            at WiseMatic, built modular Flutter apps + optimized Cubit architecture to reduce latency by ~30%
+          </span>
+        </li>
+        <li className="flex">
+          <span className="mr-2">&gt;</span>
+          <span>
+            led a 4-person engineering team to build scalable scheduling software handling 1k+ concurrent users
+          </span>
+        </li>
+      </ul>
+    </section>
 
                   <section id="projects">
                     <h2 className="text-xl font-bold mb-4">key projects</h2>
