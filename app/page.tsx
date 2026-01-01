@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <>
-      <nav className="flex fixed top-5 right-8 items-center justify-between px-6 py-4 bg-white/10 shadow-2xl rounded-lg ease-in duration-500 hover:bg-white/80 hover:scale-105 z-50">
+      { /*<nav className="flex fixed top-5 right-8 items-center justify-between px-6 py-4 bg-white/10 shadow-2xl rounded-lg ease-in duration-500 hover:bg-white/80 hover:scale-105 z-50">
         <ul className="flex space-x-6 text-gray-600 font-medium">
           <li>
             <a href="#about" className="hover:text-blue-600">
@@ -30,7 +30,7 @@ export default function Home() {
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> */}
 
       <main className="min-h-screen bg-[#FAFAFA] text-black">
         <div className="mx-auto w-full max-w-screen-2xl px-2 py-12">
@@ -76,7 +76,7 @@ export default function Home() {
         </li>
         <li className="flex">
           <span className="mr-2">&gt;</span>
-          <span>researcher at the AI for Human Sensing Lab — building generative ECG models with diffusion + VQ-VAE</span>
+          <span>received $30,000 from queen’s for academic excellence and leadership</span>
         </li>
         <li className="flex">
           <span className="mr-2">&gt;</span>
@@ -97,7 +97,7 @@ export default function Home() {
         <li className="flex">
           <span className="mr-2">&gt;</span>
           <span>
-            at WiseMatic, built modular Flutter apps + optimized Cubit architecture to reduce latency by ~30%
+            at <a href="https://www.wisematic.ca/" target="_blank" rel="noopener noreferrer">WiseMatic</a>, built modular Flutter apps + optimized Cubit architecture to reduce latency by ~30%
           </span>
         </li>
         <li className="flex">
