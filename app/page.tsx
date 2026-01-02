@@ -1,6 +1,7 @@
 'use client';
 /* eslint-disable react/no-unescaped-entities */
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import CircularGallery from "../components/CircularGallery";
@@ -26,32 +27,12 @@ export default function Home() {
         chatActive={showChat}
       />
 
-      <main className="min-h-screen bg-[#FAFAFA] text-black">
+      <main className="min-h-screen bg-[#FAFAFA] text-black relative">
         <div className="mx-auto w-full max-w-screen-2xl px-2 py-12">
           {showPictures ? (
             <div className="w-full flex justify-center">
-              <div style={{ height: "600px", position: "relative", width: "100%" }}>
+              <div style={{ height: "650px", position: "relative", width: "100%" }}>
                 <CircularGallery bend={3} textColor="#000000" borderRadius={0.05} scrollEase={0.02} />
-              </div>
-            </div>
-          ) : showChat ? (
-            <div className="flex items-center justify-center min-h-[60vh]">
-              <div className="bg-black text-green-400 px-6 py-6 rounded-2xl border-4 border-gray-800 shadow-[0_0_0_4px_#000] max-w-lg w-full">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="h-3 w-3 bg-red-500 rounded-sm" />
-                  <div className="h-3 w-3 bg-yellow-400 rounded-sm" />
-                  <div className="h-3 w-3 bg-green-500 rounded-sm" />
-                </div>
-                <p className="font-mono text-xs sm:text-sm tracking-[0.25em] uppercase mb-4">
-                  // dev console
-                </p>
-                <p className="font-mono text-sm sm:text-base leading-relaxed">
-                  &gt; chat interface is <span className="text-yellow-300">loading in the background</span>...
-                  <br />
-                  &gt; please check back soon while the pixels snap into place.
-                  <br />
-                  &gt; status: <span className="text-blue-300">in progress &gt;&gt;&gt;&gt;&gt;&gt;</span>
-                </p>
               </div>
             </div>
           ) : (
@@ -300,6 +281,20 @@ export default function Home() {
             </div>
           )}
         </div>
+
+        {showChat && (
+          <div className="fixed inset-0 z-40 flex items-center justify-center pointer-events-none">
+            <div className="pointer-events-auto">
+              <Image
+                src="/InProgress.jpg"
+                alt="Chat in progress"
+                width={600}
+                height={200}
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
+        )}
 
         <div className="mt-16">
           <Navbar
