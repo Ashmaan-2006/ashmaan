@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 export default function Home() {
   const [showPictures, setShowPictures] = useState(false);
   const [showChat, setShowChat] = useState(false);
+  const homeActive = !showPictures && !showChat;
 
   return (
     <>
@@ -25,6 +26,14 @@ export default function Home() {
           if (val) setShowPictures(false);
         }}
         chatActive={showChat}
+        homeActive={homeActive}
+        onToggleHome={(val) => {
+          if (val) {
+            setShowPictures(false);
+            setShowChat(false);
+        }
+      }}
+
       />
 
       <main className="min-h-screen bg-[#FAFAFA] text-black relative">
