@@ -21,6 +21,8 @@ interface NavbarProps {
   picturesActive?: boolean;
   onToggleChat?: (show: boolean) => void;
   chatActive?: boolean;
+  onToggleHome?: (show: boolean) => void;
+  homeActive?: boolean;
 }
 
 export default function Navbar({
@@ -28,6 +30,8 @@ export default function Navbar({
   picturesActive = false,
   onToggleChat,
   chatActive = false,
+  onToggleHome,
+  homeActive = false,
 }: NavbarProps) {
   const navRef = useRef<HTMLDivElement>(null);
   const [mouseX, setMouseX] = useState<number | null>(null);
@@ -80,6 +84,11 @@ export default function Navbar({
       return;
     }
 
+    if (label === 'Home') {
+      onToggleHome?.(!homeActive);
+      return;
+    }
+
     if (link) {
       window.open(link, '_blank');
     } else {
@@ -120,6 +129,7 @@ export default function Navbar({
           const scale = getDistanceScale(i);
           const isPictures = label === 'Pictures';
           const isChat = label === 'Chat';
+          const isHome = label === 'Home';
           return (
             <motion.button
               key={label}
@@ -138,11 +148,12 @@ export default function Navbar({
               className={clsx(
                 'flex flex-col items-center text-gray-500 hover:text-blue-600 transition-[color,opacity] duration-150 ease-out focus:outline-none',
                 isPictures && picturesActive && 'text-blue-600',
-                isChat && chatActive && 'text-blue-600'
+                isChat && chatActive && 'text-blue-600',
+                isHome && homeActive && 'text-blue-600'
               )}
               aria-label={label}
               title={label}
-              aria-pressed={isPictures ? picturesActive : isChat ? chatActive : undefined}
+              aria-pressed={isPictures ? picturesActive : isChat ? chatActive : isHome ? homeActive : undefined}
             >
               <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
             </motion.button>
