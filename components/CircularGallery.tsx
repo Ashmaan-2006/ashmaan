@@ -481,15 +481,15 @@ class App {
     const defaultItems = [
       {
         image: `/portfolio-photos/oweek1.jpg`,
-        text: 'Bridge'
+        text: 'Orientation Week #1'
       },
       {
         image: `/portfolio-photos/oweek2.jpg`,
-        text: 'Desk Setup'
+        text: 'Orientation Week #2'
       },
       {
         image: `/portfolio-photos/oweek3.jpg`,
-        text: 'Waterfall'
+        text: 'Orientation Week #3'
       },
       {
         image: `https://picsum.photos/seed/4/800/600?grayscale`,

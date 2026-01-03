@@ -85,9 +85,10 @@ export default function Navbar({
     }
 
     if (label === 'Home') {
-      onToggleHome?.(!homeActive);
+      onToggleHome?.(true);
       return;
-    }
+}
+
 
     if (link) {
       window.open(link, '_blank');
@@ -153,7 +154,11 @@ export default function Navbar({
               )}
               aria-label={label}
               title={label}
-              aria-pressed={isPictures ? picturesActive : isChat ? chatActive : isHome ? homeActive : undefined}
+              aria-pressed={
+                isPictures ? picturesActive : 
+                isChat ? chatActive : 
+                isHome ? homeActive : undefined
+              }
             >
               <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
             </motion.button>
