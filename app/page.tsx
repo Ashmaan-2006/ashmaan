@@ -27,13 +27,10 @@ export default function Home() {
         }}
         chatActive={showChat}
         homeActive={homeActive}
-        onToggleHome={(val) => {
-          if (val) {
-            setShowPictures(false);
-            setShowChat(false);
-        }
-      }}
-
+        onToggleHome={() => {
+          setShowPictures(false);
+          setShowChat(false);
+        }}
       />
 
       <main className="min-h-screen bg-[#FAFAFA] text-black relative">
@@ -305,14 +302,7 @@ export default function Home() {
           </div>
         )}
 
-        <div className="mt-16">
-          <Navbar
-            onTogglePictures={setShowPictures}
-            picturesActive={showPictures}
-            onToggleChat={setShowChat}
-            chatActive={showChat}
-          />
-        </div>
+
       </main>
     </>
   );
