@@ -14,8 +14,8 @@ export default function Hero() {
           <a href="#projects" className="text-sm font-medium underline decoration-dotted underline-offset-4">
             Selected work
           </a>
-          <a href="#about" className="text-sm font-medium">About</a>
-          <a href="#contact" className="text-sm font-medium">Contact</a>
+          <a href="#about" className="text-sm font-medium underline decoration-dotted underline-offset-4">About</a>
+          <a href="#contact" className="text-sm font-medium underline decoration-dotted underline-offset-4">Contact</a>
         </div>
       </div>
     </section>
