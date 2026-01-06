@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="text-left">
@@ -11,9 +13,9 @@ export default function Hero() {
           <span>Creator.</span>
         </p>
         <div className="mt-6 flex flex-col gap-2">
-          <a href="#projects" className="text-sm font-medium underline decoration-dotted underline-offset-4">
+          <Link href="/projects" className="text-sm font-medium underline decoration-dotted underline-offset-4">
             Selected work
-          </a>
+          </Link>
           <a href="#about" className="text-sm font-medium underline decoration-dotted underline-offset-4">About</a>
           <a href="#contact" className="text-sm font-medium underline decoration-dotted underline-offset-4">Contact</a>
         </div>
