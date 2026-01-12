@@ -69,6 +69,22 @@ body {
   color: var(--color-muted-foreground);
 }
 
+/* Glass hover for "Selected work" */
+.glass-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.glass-link:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(8px);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
