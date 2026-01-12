@@ -97,7 +97,7 @@ export default function Home() {
                       <li className="flex">
                         <span className="mr-2">&gt;</span>
                         <span>
-                          at <a href="https://www.wisematic.ca/" target="_blank" rel="noopener noreferrer">WiseMatic</a>, built modular Flutter apps + optimized Cubit architecture to reduce latency by ~30%
+                          at <a href="https://www.wisematic.ca/" target="_blank" rel="noopener noreferrer">WiseMatic Inc</a>, built modular Flutter apps + optimized Cubit architecture to reduce latency by ~30%
                         </span>
                       </li>
                       <li className="flex">
