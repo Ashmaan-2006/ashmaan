@@ -10,22 +10,26 @@ export default function Hero() {
   const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
+  const applyTheme = (nextTheme: Theme) => {
+    const isDark = nextTheme === "dark";
+    document.documentElement.classList.toggle("dark", isDark);
+    document.body.classList.toggle("dark", isDark);
+  };
+
   useEffect(() => {
-    const root = document.documentElement;
     const storedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const resolvedTheme: Theme = storedTheme === "dark" || (!storedTheme && prefersDark) ? "dark" : "light";
 
-    root.classList.toggle("dark", resolvedTheme === "dark");
+    applyTheme(resolvedTheme);
     setTheme(resolvedTheme);
     setMounted(true);
   }, []);
 
   const toggleTheme = () => {
     const nextTheme: Theme = theme === "dark" ? "light" : "dark";
-    const root = document.documentElement;
 
-    root.classList.toggle("dark", nextTheme === "dark");
+    applyTheme(nextTheme);
     localStorage.setItem("theme", nextTheme);
     setTheme(nextTheme);
   };
@@ -33,21 +37,21 @@ export default function Hero() {
   return (
     <section className="text-left">
       <div>
-        <div className="mb-6">
+        <div className="mb-5">
           <button
             type="button"
             onClick={toggleTheme}
-            className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-black/70 dark:text-white/70 hover:bg-black/[0.04] dark:hover:bg-white/[0.08] transition-colors"
+            className="inline-flex items-center gap-1.5 rounded-full border border-black/8 dark:border-white/12 bg-black/[0.015] dark:bg-white/[0.03] px-2.5 py-1 text-[11px] font-medium tracking-wide text-black/55 dark:text-white/60 hover:text-black/70 dark:hover:text-white/75 hover:bg-black/[0.03] dark:hover:bg-white/[0.06] transition-colors duration-200"
             aria-label={mounted && theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
           >
             {mounted && theme === "dark" ? (
               <>
-                <Sun className="h-3.5 w-3.5" />
+                <Sun className="h-3 w-3" />
                 Light
               </>
             ) : (
               <>
-                <Moon className="h-3.5 w-3.5" />
+                <Moon className="h-3 w-3" />
                 Dark
               </>
             )}
