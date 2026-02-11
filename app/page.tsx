@@ -33,7 +33,7 @@ export default function Home() {
         }}
       />
 
-      <main className="min-h-screen bg-[#FAFAFA] text-black relative">
+      <main className="min-h-screen bg-[#fafafa] dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 relative transition-colors duration-300">
         <div className="mx-auto w-full max-w-screen-2xl px-2 py-12">
           {showPictures ? (
             <div className="w-full flex justify-center">
@@ -117,8 +117,8 @@ export default function Home() {
                           <span className="flex-shrink-0 mr-2">&gt;</span>
                           <div className="flex-1">
                             <div className="flex flex-wrap items-baseline">
-                              <span className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default">promptech</span>
-                              <span className="text-sm text-gray-500">- text-to-ecg generation pipeline (pytorch)</span>
+                              <span className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default">promptech</span>
+                              <span className="text-sm text-gray-500 dark:text-zinc-400">- text-to-ecg generation pipeline (pytorch)</span>
                             </div>
                             <ul className="ml-4 mt-1 text-sm">
                               <li className="flex">
@@ -139,11 +139,11 @@ export default function Home() {
                                 href="https://github.com/VainerAriel/HackThe6ix2025"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default"
+                                className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default"
                               >
                                 pitchperfect
                               </Link>
-                              <span className="text-sm text-gray-500">- hack the 6ix auth0 prize, ai roleplay coach</span>
+                              <span className="text-sm text-gray-500 dark:text-zinc-400">- hack the 6ix auth0 prize, ai roleplay coach</span>
                             </div>
                             <ul className="ml-4 mt-1 text-sm">
                               <li className="flex">
@@ -164,11 +164,11 @@ export default function Home() {
                                 href="https://github.com/eunsongkoh/vybe"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default"
+                                className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default"
                               >
                                 vybe
                               </Link>
-                              <span className="text-sm text-gray-500">- hack the north - adaptive music from crowd motion</span>
+                              <span className="text-sm text-gray-500 dark:text-zinc-400">- hack the north - adaptive music from crowd motion</span>
                             </div>
                             <ul className="ml-4 mt-1 text-sm">
                               <li className="flex">
@@ -189,11 +189,11 @@ export default function Home() {
                                 href="https://github.com/ian-yeh/hack-western"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default"
+                                className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default"
                               >
                                 testpilot
                               </Link>
-                              <span className="text-sm text-gray-500">- hack western - AI agents for automated frontend UI testing</span>
+                              <span className="text-sm text-gray-500 dark:text-zinc-400">- hack western - AI agents for automated frontend UI testing</span>
                             </div>
                             <ul className="ml-4 mt-1 text-sm">
                               <li className="flex">
@@ -214,11 +214,11 @@ export default function Home() {
                                 href="https://github.com/Ashmaan-2006/MapleLens"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mr-1 border-b border-gray-300 hover:border-gray-500 cursor-default"
+                                className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default"
                               >
                                 maplelens
                               </Link>
-                              <span className="text-sm text-gray-500">- genAI genesis hackathon - AI product scanner for Canadian alternatives</span>
+                              <span className="text-sm text-gray-500 dark:text-zinc-400">- genAI genesis hackathon - AI product scanner for Canadian alternatives</span>
                             </div>
                             <ul className="ml-4 mt-1 text-sm">
                               <li className="flex">
@@ -231,7 +231,7 @@ export default function Home() {
                       </li>
                     </ul>
 
-                    <span className="text-sm text-gray-500 italic block mt-4">
+                    <span className="text-sm text-gray-500 dark:text-zinc-400 italic block mt-4">
                       for more detail, see my
                       <a
                         href="https://drive.google.com/file/d/1i0jPezaeIN_l25Y1faJTkAF4fZ1IgnOW/view?usp=sharing"
@@ -255,7 +255,7 @@ export default function Home() {
                             href="https://www.linkedin.com/in/ashmaan-sohail/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="border-b border-gray-300 hover:border-gray-500"
+                            className="border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500"
                           >
                             linkedin
                           </a>{" "}
@@ -270,13 +270,13 @@ export default function Home() {
                     <div className="text-sm space-y-2">
                       <div>
                         <span className="mr-2">technical arsenal:</span>
-                        <span className="text-gray-500">
+                        <span className="text-gray-500 dark:text-zinc-400">
                           programming(js/ts, python, java, dart, c/c++), full-stack (next.js, react, node.js), ai/ml (pytorch, tensorflow, opencv), mobile (flutter, android studio), backend (flask, fastapi), cloud/devops (aws, docker, git), databases (postgres + prisma, mongodb), design (figma, html/css, inkscape)
                         </span>
                       </div>
                       <div>
                         <span className="mr-2">interests:</span>
-                        <span className="text-gray-500">
+                        <span className="text-gray-500 dark:text-zinc-400">
                           hackathons (5+ and counting), human-centered ai (tech research w/ aiim labs), entrepreneurship (mnafs: $6k+ mrr), clean transportation (hyperloop routing models paper), basketball (intramural team captain, high school varsity)
                         </span>
                       </div>

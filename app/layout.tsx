@@ -2,11 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "../styles/globals.css";
 import SplashCursor from "@/components/SplashCursor";
-
-
-
-<SplashCursor />
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

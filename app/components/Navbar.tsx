@@ -101,7 +101,7 @@ export default function Navbar({
     <div className="hidden sm:block fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
       <nav
         ref={navRef}
-        className="flex bg-white dark:bg-zinc-900 shadow-xl rounded-full px-6 py-4 gap-6 border border-gray-200 dark:border-zinc-700 backdrop-blur-md relative"
+        className="flex bg-white/90 dark:bg-zinc-900/85 shadow-xl rounded-full px-6 py-4 gap-6 border border-gray-200 dark:border-zinc-700 backdrop-blur-md relative transition-colors"
       >
         {mouseX !== null && (
           <motion.div
@@ -147,7 +147,7 @@ export default function Navbar({
                 mass: 0.6,
               }}
               className={clsx(
-                'flex flex-col items-center text-gray-500 hover:text-blue-600 transition-[color,opacity] duration-150 ease-out focus:outline-none',
+                'flex flex-col items-center text-gray-500 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-[color,opacity] duration-150 ease-out focus:outline-none',
                 isPictures && picturesActive && 'text-blue-600',
                 isChat && chatActive && 'text-blue-600',
                 isHome && homeActive && 'text-blue-600'
