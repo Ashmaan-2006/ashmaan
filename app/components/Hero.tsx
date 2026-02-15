@@ -37,11 +37,11 @@ export default function Hero() {
   return (
     <section className="text-left">
       <div>
-        <div className="mb-5">
+        <div>
           <button
             type="button"
             onClick={toggleTheme}
-            className="inline-flex items-center gap-1.5 rounded-full border border-black/8 dark:border-white/12 bg-black/[0.015] dark:bg-white/[0.03] px-2.5 py-1 text-[11px] font-medium tracking-wide text-black/55 dark:text-white/60 hover:text-black/70 dark:hover:text-white/75 hover:bg-black/[0.03] dark:hover:bg-white/[0.06] transition-colors duration-200"
+            className="fixed right-4 top-4 z-50 inline-flex items-center gap-1.5 rounded-full border border-black/8 dark:border-white/12 bg-black/[0.015] dark:bg-white/[0.03] px-2.5 py-1 text-[11px] font-medium tracking-wide text-black/55 dark:text-white/60 hover:text-black/70 dark:hover:text-white/75 hover:bg-black/[0.03] dark:hover:bg-white/[0.06] transition-colors duration-200 sm:right-6 sm:top-6"
             aria-label={mounted && theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
           >
             {mounted && theme === "dark" ? (
