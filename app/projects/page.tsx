@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import PixelSnow from "../components/PixelSnow";
 
 const projects = [
   {
@@ -38,13 +39,31 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-[#fafafa] dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 relative transition-colors duration-300">
+      <div className="pointer-events-none absolute inset-0 z-0 hidden dark:block" aria-hidden="true">
+        <PixelSnow
+          color="#ffffff"
+          flakeSize={0.01}
+          minFlakeSize={1.25}
+          pixelResolution={200}
+          speed={1.25}
+          density={0.3}
+          direction={125}
+          brightness={0.75}
+          depthFade={8}
+          farPlane={20}
+          gamma={0.4545}
+          variant="snowflake"
+          className="opacity-55"
+        />
+      </div>
+
       <Link
         href="/"
         className="fixed left-4 top-4 z-50 rounded-full bg-white/90 dark:bg-zinc-900/90 shadow-md border border-gray-200 dark:border-zinc-700 px-3 py-1 text-sm text-gray-700 dark:text-zinc-300 hover:text-blue-600 hover:border-blue-200 dark:hover:border-blue-500/40 transition-colors"
       >
         ← Back
       </Link>
-      <div className="mx-auto max-w-4xl px-4 py-16 space-y-10">
+      <div className="relative z-10 mx-auto max-w-4xl px-4 py-16 space-y-10">
         <header className="space-y-2">
           <p className="text-sm uppercase tracking-[0.25em] text-gray-500 dark:text-zinc-400">Selected work</p>
           <h1 className="text-3xl font-bold">Projects</h1>

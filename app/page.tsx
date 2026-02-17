@@ -7,6 +7,7 @@ import { useState } from "react";
 import CircularGallery from "../components/CircularGallery";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import PixelSnow from "./components/PixelSnow";
 
 export default function Home() {
   const [showPictures, setShowPictures] = useState(false);
@@ -34,7 +35,25 @@ export default function Home() {
       />
 
       <main className="min-h-screen bg-[#fafafa] dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 relative transition-colors duration-300">
-        <div className="mx-auto w-full max-w-screen-2xl px-2 py-12">
+        <div className="pointer-events-none absolute inset-0 z-0 hidden dark:block" aria-hidden="true">
+          <PixelSnow
+            color="#ffffff"
+            flakeSize={0.01}
+            minFlakeSize={1.25}
+            pixelResolution={200}
+            speed={1.25}
+            density={0.3}
+            direction={125}
+            brightness={0.75}
+            depthFade={8}
+            farPlane={20}
+            gamma={0.4545}
+            variant="snowflake"
+            className="opacity-55"
+          />
+        </div>
+
+        <div className="relative z-10 mx-auto w-full max-w-screen-2xl px-2 py-12">
           {showPictures ? (
             <div className="w-full flex justify-center">
               <div style={{ height: "650px", position: "relative", width: "100%" }}>
