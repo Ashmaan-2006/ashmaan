@@ -61,12 +61,12 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-12 items-start">
+            <div className="grid grid-cols-1 gap-12 items-start lg:grid-cols-[300px_minmax(0,1fr)] dark:lg:grid-cols-[300px_minmax(0,1fr)_340px]">
               <div className="lg:sticky lg:top-[30px] self-start lg:ml-10">
                 <Hero />
               </div>
 
-              <div className="w-full max-w-3xl lg:-mr-16">
+              <div className="w-full max-w-3xl">
                 <div className="space-y-10">
                   <section>
                     <h2 className="text-xl font-bold mb-4">origins</h2>
@@ -303,6 +303,20 @@ export default function Home() {
                   </section>
                 </div>
               </div>
+              <aside className="hidden dark:block self-start">
+                <div className="pointer-events-none hidden lg:block fixed right-6 bottom-6 z-20 w-[440px]">
+                  <div className="rounded-2xl overflow-hidden">
+                    <Image
+                      src="/portfolio-photos/PixelSnowman.png"
+                      alt="Dark mode Snowman"
+                      width={960}
+                      height={1560}
+                      className="w-full h-auto object-cover opacity-90"
+                      priority
+                    />
+                  </div>
+                </div>
+              </aside>
             </div>
           )}
         </div>
