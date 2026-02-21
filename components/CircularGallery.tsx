@@ -498,6 +498,10 @@ class App {
       {
         image: `/portfolio-photos/KML.jpg`,
         text: 'Kingston Math Competition'
+      },
+      {
+        image: `/portfolio-photos/QHacks.png`,
+        text: 'QHacks 2026'
       }
     ];
     const galleryItems = items && items.length ? items : defaultItems;
