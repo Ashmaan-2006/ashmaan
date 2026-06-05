@@ -105,25 +105,37 @@ export default function Home() {
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold mb-4">internships</h2>
+                    <h2 className="text-xl font-bold mb-4">experience</h2>
                     <ul className="space-y-2">
                       <li className="flex">
                         <span className="mr-2">&gt;</span>
-                        <span>
-                          shipped production features at Playtoon - cutting query times saving 1500+ user hours + integrating LLM tooling
-                        </span>
+                        <span>incoming software engineer intern at wsp, building internal agents tools for thousands of employees</span>
                       </li>
                       <li className="flex">
                         <span className="mr-2">&gt;</span>
-                        <span>
-                          at <a href="https://www.wisematic.ca/" target="_blank" rel="noopener noreferrer">WiseMatic Inc</a>, built modular Flutter apps + optimized Cubit architecture to reduce latency by ~30%
-                        </span>
+                        <span>at playtoon, shipped ai-powered production features supporting 1,200 monthly active users</span>
                       </li>
                       <li className="flex">
                         <span className="mr-2">&gt;</span>
-                        <span>
-                          led a 4-person engineering team to build scalable scheduling software handling 1k+ concurrent users
-                        </span>
+                        <span>at wisematic, automated data pipelines processing 15,000+ records weekly and eliminated 8+ hours of recurring work</span>
+                      </li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-bold mb-4">research</h2>
+                    <ul className="space-y-2">
+                      <li className="flex">
+                        <span className="mr-2">&gt;</span>
+                        <span>published research on benchmarking mllms for forensic science and medicine in ieee access</span>
+                      </li>
+                      <li className="flex">
+                        <span className="mr-2">&gt;</span>
+                        <span>developing generative models that translate clinical text into synthetic ecg signals</span>
+                      </li>
+                      <li className="flex">
+                        <span className="mr-2">&gt;</span>
+                        <span>exploring multimodal learning, agentic systems, and reliable ai evaluation</span>
                       </li>
                     </ul>
                   </section>
@@ -136,13 +148,13 @@ export default function Home() {
                           <span className="flex-shrink-0 mr-2">&gt;</span>
                           <div className="flex-1">
                             <div className="flex flex-wrap items-baseline">
-                              <span className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default">promptech</span>
-                              <span className="text-sm text-gray-500 dark:text-zinc-400">- text-to-ecg generation pipeline (pytorch)</span>
+                              <span className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default">clinical graphrag engine</span>
+                              <span className="text-sm text-gray-500 dark:text-zinc-400">- searchable patient timelines</span>
                             </div>
                             <ul className="ml-4 mt-1 text-sm">
                               <li className="flex">
                                 <span className="mr-2">-</span>
-                                <span>exploring diffusion + vq-style tokenization for stable ecg synthesis</span>
+                                <span>transformed 50k+ healthcare records into graph-backed clinical context</span>
                               </li>
                             </ul>
                           </div>
@@ -154,20 +166,13 @@ export default function Home() {
                           <span className="flex-shrink-0 mr-2">&gt;</span>
                           <div className="flex-1">
                             <div className="flex flex-wrap items-baseline">
-                              <Link
-                                href="https://github.com/VainerAriel/HackThe6ix2025"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default"
-                              >
-                                pitchperfect
-                              </Link>
-                              <span className="text-sm text-gray-500 dark:text-zinc-400">- hack the 6ix auth0 prize, ai roleplay coach</span>
+                              <span className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default">capital markets agent</span>
+                              <span className="text-sm text-gray-500 dark:text-zinc-400">- grounded financial analysis pipeline</span>
                             </div>
                             <ul className="ml-4 mt-1 text-sm">
                               <li className="flex">
                                 <span className="mr-2">-</span>
-                                <span>next.js frontend + flask backend + gemini, stored conversations in mongodb</span>
+                                <span>turns raw market data into grounded, auditable analyst reports</span>
                               </li>
                             </ul>
                           </div>
@@ -187,62 +192,12 @@ export default function Home() {
                               >
                                 vybe
                               </Link>
-                              <span className="text-sm text-gray-500 dark:text-zinc-400">- hack the north - adaptive music from crowd motion</span>
+                              <span className="text-sm text-gray-500 dark:text-zinc-400">- real-time crowd intelligence system</span>
                             </div>
                             <ul className="ml-4 mt-1 text-sm">
                               <li className="flex">
                                 <span className="mr-2">-</span>
-                                <span>depth-sensor powered playlist system that reacts to audience energy in real-time to drive engagement</span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </li>
-
-                      <li>
-                        <div className="flex items-start">
-                          <span className="flex-shrink-0 mr-2">&gt;</span>
-                          <div className="flex-1">
-                            <div className="flex flex-wrap items-baseline">
-                              <Link
-                                href="https://github.com/ian-yeh/hack-western"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default"
-                              >
-                                testpilot
-                              </Link>
-                              <span className="text-sm text-gray-500 dark:text-zinc-400">- hack western - AI agents for automated frontend UI testing</span>
-                            </div>
-                            <ul className="ml-4 mt-1 text-sm">
-                              <li className="flex">
-                                <span className="mr-2">-</span>
-                                <span>full-stack app using Playwright, WebSockets, FastAPI, and Gemini to execute UI test flows from a single prompt</span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </li>
-
-                      <li>
-                        <div className="flex items-start">
-                          <span className="flex-shrink-0 mr-2">&gt;</span>
-                          <div className="flex-1">
-                            <div className="flex flex-wrap items-baseline">
-                              <Link
-                                href="https://github.com/Ashmaan-2006/MapleLens"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default"
-                              >
-                                maplelens
-                              </Link>
-                              <span className="text-sm text-gray-500 dark:text-zinc-400">- genAI genesis hackathon - AI product scanner for Canadian alternatives</span>
-                            </div>
-                            <ul className="ml-4 mt-1 text-sm">
-                              <li className="flex">
-                                <span className="mr-2">-</span>
-                                <span>camera-based product recognition that recommends cheaper Canadian equivalents to promote smarter shopping</span>
+                                <span>measured crowd energy with computer vision at hack the north</span>
                               </li>
                             </ul>
                           </div>
@@ -284,23 +239,6 @@ export default function Home() {
                     </ul>
                   </section>
 
-                  <section>
-                    <h2 className="text-xl font-bold mb-4">background</h2>
-                    <div className="text-sm space-y-2">
-                      <div>
-                        <span className="mr-2">technical arsenal:</span>
-                        <span className="text-gray-500 dark:text-zinc-400">
-                          programming(js/ts, python, java, dart, c/c++), full-stack (next.js, react, node.js), ai/ml (pytorch, tensorflow, opencv), mobile (flutter, android studio), backend (flask, fastapi), cloud/devops (aws, docker, git), databases (postgres + prisma, mongodb), design (figma, html/css, inkscape)
-                        </span>
-                      </div>
-                      <div>
-                        <span className="mr-2">interests:</span>
-                        <span className="text-gray-500 dark:text-zinc-400">
-                          hackathons (5+ and counting), human-centered ai (tech research w/ aiim labs), entrepreneurship (mnafs: $6k+ mrr), clean transportation (hyperloop routing models paper), basketball (intramural team captain, high school varsity)
-                        </span>
-                      </div>
-                    </div>
-                  </section>
                 </div>
               </div>
               <aside className="hidden dark:block self-start">
