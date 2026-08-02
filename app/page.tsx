@@ -166,7 +166,14 @@ export default function Home() {
                           <span className="flex-shrink-0 mr-2">&gt;</span>
                           <div className="flex-1">
                             <div className="flex flex-wrap items-baseline">
-                              <span className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default">capital markets agent</span>
+                              <Link
+                                href="https://github.com/Ashmaan-2006/CapMarket"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mr-1 border-b border-gray-300 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-500 cursor-default"
+                              >
+                                capital mark agent
+                              </Link>
                               <span className="text-sm text-gray-500 dark:text-zinc-400">- grounded financial analysis pipeline</span>
                             </div>
                             <ul className="ml-4 mt-1 text-sm">
