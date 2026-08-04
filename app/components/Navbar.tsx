@@ -3,13 +3,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Home, MessageCircle, Twitter, Linkedin, Github, Mail, Camera } from 'lucide-react';
+import { Home, MessageCircle, Twitter, Linkedin, Github, Mail, Camera, Trophy } from 'lucide-react';
 import clsx from 'clsx';
 
 const navItems = [
   { icon: Twitter, label: 'X', link: 'https://x.com/AshmaanSohail' },
   { icon: Linkedin, label: 'LinkedIn', link: 'https://www.linkedin.com/in/ashmaan-sohail/' },
   { icon: Github, label: 'GitHub', link: 'https://github.com/Ashmaan-2006' },
+  { icon: Trophy, label: 'Devpost', link: 'https://devpost.com/ashmaansohai' },
   { icon: Mail, label: 'Email', link: 'mailto:23px63@queensu.ca.com' },
   { icon: Home, label: 'Home' },
   { icon: MessageCircle, label: 'Chat' },
